@@ -1,5 +1,4 @@
-import { init } from "next/dist/compiled/webpack/webpack";
-import { title } from "process";
+
 
 export default {
     name: 'order',
