@@ -15,7 +15,7 @@ const blogs = async ({ params }: any) => {
   return (
     <div className='bg-gray-100 pt-36 pb-10 relative top-10 mb-10'>
       <div className='mx-10 md:mx-40'>
-        {sanityData.map((blog: any, index: string) => (
+        {sanityData.map((blog, index: string) => (
           <div key={index}>
              <h2 className="text-center text-4xl font-lato font-bold mb-6 text-[#151875]">{blog.heading}</h2>
             <Image src={urlFor(blog.image).url()} alt={blog.title} width={400} height={400} className="sm:w-[600px] md:w-[700px] lg:w-full" />

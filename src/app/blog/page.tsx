@@ -40,14 +40,14 @@ export default function BlogPage() {
           {/* Main content */}
           <div className="container lg:p-6">
             <div className="grid gap-6">
-              {posts.map((blog:any) => (
+              {posts.map((blog) => (
                 <div key={blog._id} className="bg-white p-4 rounded-lg shadow-lg">
                   {blog.image && (
                     <Image src={urlFor(blog.image).url()} alt="image" width={400} height={400} className="sm:w-[600px] md:w-[700px] lg:w-full" />
                   )}
                   <div className="flex">
                   <h2 className="text-3xl font-lato font-semibold mt-6 text-[#151875]">{blog.heading}</h2>
-                  <p className="text-gray-600 text-sm mt-8 ml-10 sm:ml-[60%] lg:ml-[80%]">{new Date(blog.blogDate).toDateString()}</p>
+                 
                   </div>
                   
                   <p className="text-gray-600 w-[350px] sm:w-[550px] md:w-[700px] lg:w-[800px] mt-2">{blog.description}</p>
