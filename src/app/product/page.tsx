@@ -27,6 +27,7 @@ useEffect(() => {
   }
   fetchProduct()
 },[])
+console.log(cartCount);
 
 
   useEffect(() => {

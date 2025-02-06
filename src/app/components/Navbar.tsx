@@ -27,6 +27,7 @@ export default function Navbar() {
 
         fetchProducts();
     }, []);
+console.log(products);
 
     return (
         <>
