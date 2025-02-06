@@ -47,7 +47,7 @@ export default function BlogPage() {
                   )}
                   <div className="flex">
                   <h2 className="text-3xl font-lato font-semibold mt-6 text-[#151875]">{blog.heading}</h2>
-                 
+                  <p className="text-gray-600 text-sm mt-8 ml-10 sm:ml-[60%] lg:ml-[80%]">{new Date(blog.blogDate.current).toDateString()}</p>
                   </div>
                   
                   <p className="text-gray-600 w-[350px] sm:w-[550px] md:w-[700px] lg:w-[800px] mt-2">{blog.description}</p>
