@@ -1,6 +1,5 @@
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import Blog from "@/types/blog";
 import Image from "next/image";
 import { notFound } from "next/navigation"; // Import for handling 404
 
