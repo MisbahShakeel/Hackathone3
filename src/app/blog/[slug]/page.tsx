@@ -7,13 +7,14 @@ interface Params {
   slug: string;
 }
 
-const blogs = async ({ params }: { params: Params }) => {
-
-  const blogQuery = `*[_type == 'blog' && slug.current == '/${params.slug}'] {
+const blogs = async ({ params }: { params: Promise<Params> }) => {
+  const { slug } = await params;
+  const blogQuery = `*[_type == 'blog' && slug.current == '${slug}'] {
     heading,
     image,
     description,
-    blogDate}`
+    blogDate
+  }`
 
   const sanityData = await client.fetch(blogQuery)
   return (
