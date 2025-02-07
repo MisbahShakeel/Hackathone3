@@ -1,10 +1,12 @@
 import Link from "next/link";
+import React from "react";
 
-export default function PaymentSuccess({
-    searchParams: { amount },
-  }: {
-    searchParams: { amount: string };
-  }) {
+interface PaymentSuccessProps {
+  searchParams?: Promise<{ amount: string}>
+}
+
+export default async function PaymentSuccess({ searchParams }: PaymentSuccessProps): Promise<React.ReactElement> {
+  const amount = (await searchParams)?.amount || '0.00';
     return (
       <main className="max-w-6xl mx-auto p-10 text-white text-center border rounded-md bg-gradient-to-tr from-blue-500 to-purple-500">
         <div className="mb-10 mt-40">
