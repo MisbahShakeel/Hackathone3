@@ -1,7 +1,7 @@
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
-import { notFound } from "next/navigation"; // Import for handling 404
+import { notFound } from "next/navigation"; 
 
 interface BlogPageProps {
   params: Promise<{ slug: string }>;
