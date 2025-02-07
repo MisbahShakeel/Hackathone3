@@ -185,7 +185,7 @@ const handleWishlist = (e: React.MouseEvent, product: Product) => {
             <div key={product._id} className="border p-4 rounded-lg shadow hover:shadow-lg transition-all bg-white">
               <Link href={`/components/product/${product.slug.current}`}>
                 {product.image && (
-                  <Image src={urlFor(product.image).url()} alt="image" width={200} height={200} className="md:w-full h-48 object-cover" />
+                  <Image src={urlFor(product.image).url()} alt="image" width={200} height={200} className="md:w-[800px] h-48 object-cover" />
                 )}
                 <h2 className="text-blue-800 font-lato font-bold">{product.productName}</h2>
                 <p className="text-gray-500 mt-2">{product.price ? `$${product.price}` : "Price not available"}</p>
