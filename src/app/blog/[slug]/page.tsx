@@ -3,12 +3,11 @@ import { urlFor } from "@/sanity/lib/image"
 import Image from "next/image"
 
 
-interface Params {
+interface PagProps {
   slug: string;
 }
 
-const blogs = async ({ params }: { params: Promise<Params> }) => {
-  const { slug } = await params;
+const blogs = async ({ slug }: PagProps) => {
   const blogQuery = `*[_type == 'blog' && slug.current == '${slug}'] {
     heading,
     image,
