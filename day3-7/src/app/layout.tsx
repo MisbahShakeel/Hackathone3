@@ -4,8 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +38,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         
-        
+        <SpeedInsights/>
       </body>
     </html>
     
